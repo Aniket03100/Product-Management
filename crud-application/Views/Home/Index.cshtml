@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .about-description-container {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .about-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .about-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+            .about-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <!-- Left Side: Text Content -->
+        <div class="about-description-container">
+            <h1 class="about-title">About</h1>
+            <p class="about-description">
+                This project is a simple and effective <strong>Product-Category Management System</strong> designed to simplify and optimize the management of products and their associated categories.
+            </p>
+
+            <h2 class="about-title">Purpose</h2>
+            <p class="about-description">
+                This project is ideal for businesses or systems that need to keep track of their inventory or product catalog. It simplifies operations and ensures better data organization and accessibility.
+            </p>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="about-image">
+            <img src="~/images/ProductHome.png" alt="Project Overview">
+        </div>
+    </div>
+</body>
+
+</html>

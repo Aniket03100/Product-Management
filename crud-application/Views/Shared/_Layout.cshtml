@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - crud_application</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
+    
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+            .nav-links a.active-link {
+                background-color: #ff5722;
+                color: white;
+            }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .nav-link:hover {
+                background: #ffd700;
+                color: #4e54c8;
+                transform: scale(1.1);
+        }
+
+
+        .container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .footer {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 4px 0;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CRUD Application</a>
+            <div class="nav-links">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index">Product List</a>
+                <a class="nav-link" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
+            </div>
+        </nav>
+    </header>
+
+    
+
+ 
+    
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+           
+        </main>
+    </div>
+    
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - CRUD Application
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

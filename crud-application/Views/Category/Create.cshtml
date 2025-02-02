@@ -1,0 +1,28 @@
+﻿@model crud_application.Models.Category
+
+@{
+    ViewData["Title"] = "Create Category";
+}
+
+<div class="container">
+    <h2 class="text-center">Create Category </h2>
+
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+            <div><label asp-for="CategoryName" class="control-label"></label></div>
+            <div> <input asp-for="CategoryName" class="form-control" /></div>
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+    <div class="container">
+            <button type="submit" class="btn btn-success">Create</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+    </div>
+   
+</form>
+
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
